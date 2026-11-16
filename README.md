@@ -33,4 +33,4 @@ e siga as instruções de DNS que aparecem.
 
 - WhatsApp: constante `FONE` no script do `index.html`.
 - Textos: direto no `index.html`.
-- Fotos: `assets/img/` (webp). A imagem das mãos da hero fica em `assets/hero/maos.webp`.
+- Fotos: `assets/img/` (webp). Ao trocar uma foto, mude o nome do arquivo (ex.: `-v3`) para o navegador não mostrar a antiga.
