@@ -118,9 +118,9 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--terracota)}
 .prova{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:34px;font-size:14px;color:var(--cacau)}
 .prova b{font-weight:900;font-size:16px;margin-right:4px}
 .prova .estrelas{color:var(--mel);letter-spacing:2px}
-.hero-foto{position:relative;z-index:3;justify-self:end;width:min(100%,400px);margin-top:-10px}
-.hero-foto .arco{position:relative;border-radius:999px 999px 26px 26px;overflow:hidden;aspect-ratio:4/5.4;background:var(--linho);box-shadow:0 30px 60px -30px rgba(74,26,23,.35)}
-.hero-foto .arco img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.hero-foto{position:relative;z-index:3;justify-self:end;width:min(100%,400px);margin-top:34px}
+.hero-foto .arco{position:relative;border-radius:999px 999px 26px 26px;aspect-ratio:4/5.4;background:linear-gradient(170deg,#EFE4D6 10%,#E2CDB6);box-shadow:0 30px 60px -30px rgba(74,26,23,.35)}
+.hero-foto .arco img{position:absolute;left:0;bottom:0;width:100%;height:auto;clip-path:inset(-40% 0 0 0 round 0 0 26px 26px)}
 .hero-foto::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--mel);border-radius:999px 999px 26px 26px;z-index:-1}
 .selo{position:absolute;left:-34px;bottom:56px;background:var(--areia);border-radius:20px;padding:14px 18px;box-shadow:0 18px 40px -20px rgba(43,29,24,.35);font-size:13px;line-height:1.35;color:var(--cacau)}
 .selo strong{display:block;font-family:var(--serif);font-size:30px;font-weight:500;line-height:1;color:var(--terracota)}
@@ -273,8 +273,9 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--terracota)}
 .final h2.on .rw>span{transform:none}
 .final p{margin-top:26px;font-size:18px;max-width:42ch}
 .final .btn{margin-top:38px}
-.final-foto{border-radius:999px 999px 26px 26px;overflow:hidden;aspect-ratio:2/3;max-width:380px;justify-self:end;width:100%}
-.final-foto img{width:100%;height:100%;object-fit:cover}
+.final-foto{position:relative;border-radius:999px 999px 26px 26px;aspect-ratio:3/4;max-width:380px;justify-self:end;width:100%;margin-top:60px;background:radial-gradient(120% 90% at 50% 25%,rgba(233,180,140,.30),rgba(255,248,241,.05) 70%)}
+.final-foto::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(200,149,90,.7);border-radius:999px 999px 26px 26px;pointer-events:none}
+.final-foto img{position:absolute;left:0;bottom:0;width:100%;height:auto;clip-path:inset(-40% 0 0 0 round 0 0 26px 26px)}
 
 /* Rodapé */
 .rodape{padding:56px 0 110px;border-top:1px solid rgba(43,29,24,.12);font-size:15px}
@@ -404,7 +405,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--terracota)}
       </div>
     </div>
     <figure class="hero-foto" id="heroFoto">
-      <div class="arco"><img src="assets/img/brenda-hero.webp" width="800" height="1200" alt="Brenda, terapeuta tântrica, sorrindo em ensaio com vestido terracota e tranças verdes" fetchpriority="high"></div>
+      <div class="arco"><img src="assets/img/brenda-hero.webp" width="880" height="1319" alt="Brenda, terapeuta tântrica, sorrindo em ensaio com vestido terracota e tranças verdes" fetchpriority="high"></div>
       <figcaption class="selo"><strong>5,0</strong>no Google, com<br>203 avaliações</figcaption>
     </figure>
   </div>
@@ -424,7 +425,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--terracota)}
     </div>
     <div class="bento">
       <article class="card c-ayur mask">
-        <div class="bg"><img src="assets/img/massagem-ayurvedica.webp" width="467" height="700" loading="lazy" alt="Mãos massageando a sola do pé de uma pessoa deitada na maca, coberta por uma manta"></div>
+        <div class="bg"><img src="assets/img/massagem-ayurvedica.webp" width="900" height="1349" loading="lazy" alt="Mãos massageando a sola do pé de uma pessoa deitada na maca, coberta por uma manta"></div>
         <span class="tag">A mais pedida</span>
         <h3>Massagem Ayurvédica</h3>
         <p>Profunda, com óleos e manobras firmes que chegam até o rosto. Para quem anda tenso, ansioso ou dormindo mal e precisa soltar o corpo de verdade.</p>
@@ -511,8 +512,8 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--terracota)}
 <section class="sec" id="sobre" data-bg="#F6F0E8">
   <div class="wrap sobre-grid">
     <div class="sobre-fotos">
-      <div class="f1 cortina"><img src="assets/img/brenda-sobre.webp" width="467" height="700" loading="lazy" alt="Brenda de colete claro e tranças presas, de braços cruzados e sorrindo"></div>
-      <div class="f2 blur"><img src="assets/img/brenda-consultorio.webp" width="467" height="700" loading="lazy" alt="Brenda sentada no consultório, ao lado de um quadro escrito à mão sobre cuidar do corpo"></div>
+      <div class="f1 cortina"><img src="assets/img/brenda-sobre.webp" width="800" height="1199" loading="lazy" alt="Brenda de colete claro e tranças presas, de braços cruzados e sorrindo"></div>
+      <div class="f2 blur"><img src="assets/img/brenda-consultorio.webp" width="800" height="1199" loading="lazy" alt="Brenda sentada no consultório, ao lado de um quadro escrito à mão sobre cuidar do corpo"></div>
     </div>
     <div class="sobre-txt">
       <h2 class="h2 rv">Oi, eu sou a <em>Brenda</em>.</h2>
@@ -561,7 +562,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--terracota)}
       </div>
     </div>
     <div class="local-foto mask">
-      <img src="assets/img/cristais.webp" width="467" height="700" loading="lazy" alt="Detalhe de cristais e velas no espaço de atendimento">
+      <img src="assets/img/cristais.webp" width="800" height="1199" loading="lazy" alt="Detalhe de cristais e velas no espaço de atendimento">
       <p class="leg"><b>Só com agendamento</b>Assim eu preparo o espaço e o horário só para você.</p>
     </div>
   </div>
@@ -574,7 +575,7 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--terracota)}
       <p class="rv">Me manda uma mensagem. A gente conversa sem compromisso e encontra o cuidado certo para o seu momento.</p>
       <a class="btn btn-claro zap-link rv" href="#" data-msg="Oi Brenda, vim pelo site e quero minha primeira sessão">Quero minha primeira sessão</a>
     </div>
-    <div class="final-foto blur"><img src="assets/img/brenda-alegria.webp" width="467" height="700" loading="lazy" alt="Brenda de blusa mostarda, rindo e fazendo sinal de paz com a mão"></div>
+    <div class="final-foto blur"><img src="assets/img/brenda-alegria.webp" width="760" height="1131" loading="lazy" alt="Brenda de blusa laranja, rindo e fazendo sinal de paz com a mão"></div>
   </div>
 </section>
 
