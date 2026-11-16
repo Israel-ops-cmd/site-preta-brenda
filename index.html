@@ -642,7 +642,10 @@ h1 em,h2 em,h3 em{font-style:italic;color:var(--terracota)}
   /* Entradas: subir, desfoque, máscara, cortina, linha */
   document.querySelectorAll(".linha path").forEach(function(p){ p.parentNode.style.setProperty("--len", Math.ceil(p.getTotalLength())); });
   var ioIn=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); ioIn.unobserve(e.target); } }); }, {rootMargin:"0px 0px -12% 0px", threshold:.08});
-  document.querySelectorAll(".rv,.blur,.mask,.cortina,.linha").forEach(function(el){ ioIn.observe(el); });
+  document.querySelectorAll(".rv,.blur,.cortina,.linha").forEach(function(el){ ioIn.observe(el); });
+  /* clip-path esconde o elemento do IntersectionObserver: observa o pai e revela os filhos .mask */
+  var ioMask=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.querySelectorAll(":scope > .mask").forEach(function(m){ m.classList.add("in"); }); ioMask.unobserve(e.target); } }); }, {rootMargin:"0px 0px -12% 0px", threshold:0});
+  document.querySelectorAll(".mask").forEach(function(m){ ioMask.observe(m.parentElement); });
 
   /* Contadores */
   var ioNum=new IntersectionObserver(function(es){ es.forEach(function(e){
